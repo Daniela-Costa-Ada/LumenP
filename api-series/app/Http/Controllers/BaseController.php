@@ -20,7 +20,6 @@ abstract class BaseController
                 201
             );
     }
-
     public function show(int $id)
     {
         $recurso = $this->classe::find($id);
@@ -41,7 +40,6 @@ abstract class BaseController
         }
         $recurso->fill($request->all());
         $recurso->save();
-
         return $recurso;
     }
 
@@ -53,7 +51,6 @@ abstract class BaseController
                 'erro' => 'Recurso não encontrado'
             ], 404);
         }
-
         return response()->json('', 204);
     }
 }

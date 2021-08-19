@@ -7,7 +7,8 @@ class Episodio extends Model
 {
     public $timestamps = false;
     protected $fillable = ['temporada', 'numero', 'assistido', 'serie_id'];
-    protected $appends = ['links'];
+    protected $appends = ['links'];//relaciona a serie e episodio com links que são gerados e podem ser acessados
+    //um atraves do outro
 
     public function serie()
     {
@@ -26,4 +27,4 @@ class Episodio extends Model
             'serie' => '/api/series/' . $this->serie_id
         ];
     }
-}
+}//acessor para os links

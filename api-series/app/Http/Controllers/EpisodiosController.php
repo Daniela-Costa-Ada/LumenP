@@ -15,4 +15,4 @@ class EpisodiosController extends BaseController
             ->paginate();
         return $episodios;
     }
-}
+}//query par busca do episodio no banco, pelo id da serie, paginando os resultados
